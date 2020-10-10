@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Goit-markup-hw-04</title>
+    <title>Goit-markup-hw-05</title>
     <link 
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" 
     rel="stylesheet">
@@ -46,12 +46,21 @@
 
     <main>
       <!-- <Шапка Блок банер Hero> -->
-      <div class="hero">
-        <section class="container">
+      <section class="hero">
+        <div class="container"> 
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <a href="" class="link button primary">Заказать услугу</a>
-        </section>
-      </div>
+          <button class="link button primary" data-modal-open>Заказать услугу</button>
+            <div class="backdrop is-hidden" data-modal>
+              <div class="modal">
+                  <button type="button" class="circle-close-window" data-modal-close>
+                    <svg style="width:18px; height:18px">
+                      <use href="./images/sprite.svg#vectorx">Закрыть</use>
+                    </svg>  
+                  </button>
+              </div>
+            </div>
+        </div>
+      </section>
 
       <!-- Особенности -->
       <section class="section container">
@@ -85,23 +94,33 @@
       </section>
 
       <!-- Чем мы занимаемся -->
-      <div class="container">
-        <section class="section work-section">
+      <section class="section work-section">
+        <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
   
           <ul class="work list">
             <li class="item">
-              <img src="./images/img.jpg" alt="Компьютерное приложение" width="370"/>
+              <div class="product-wrapper">
+                <p class="product-name">Десктопные приложения</p>
+                <img src="./images/img.jpg" alt="Компьютерное приложение" width="370"/>
+              </div>
             </li>
             <li class="item">
-              <img src="./images/box2.jpg" alt="Мобильное приложение" width="370"/>
+              <div class="product-wrapper">
+                <p class="product-name">Мобильные приложения</p>
+                <img src="./images/box2.jpg" alt="Мобильное приложение" width="370"/>
+              </div>
             </li>
             <li class="item">
-              <img src="./images/box3.jpg" alt="Таблетка приложение" width="370"/>
+              <div class="product-wrapper">
+                <p class="product-name">Дизайнерские решения</p>
+                <img src="./images/box3.jpg" alt="Таблетка приложение" width="370"/>
+              </div>
             </li>
           </ul>
-        </section>
-      </div>
+        </div>
+      </section>
+  
 
       <!-- Наша команда -->
     <section class="section all-team">
@@ -374,5 +393,6 @@
         </div>
       </footer>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
