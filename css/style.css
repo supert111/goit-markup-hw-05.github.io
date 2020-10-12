@@ -657,6 +657,7 @@ margin: 0px auto 50px;
   background: rgba(0, 0, 0, 0.2); 
   z-index: 1;
   overflow: auto;
+  transition: all 200ms linear;
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -664,13 +665,16 @@ margin: 0px auto 50px;
   pointer-events: none;
 }
 .backdrop.is-hidden .modal {
+  margin: auto;
   transform: scale(0.3); 
 }
 .modal {
-  position: absolute;
+  position: relative;
+  margin: auto;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   width: 528px;
   height: 581px;
   background: #FFFFFF;
